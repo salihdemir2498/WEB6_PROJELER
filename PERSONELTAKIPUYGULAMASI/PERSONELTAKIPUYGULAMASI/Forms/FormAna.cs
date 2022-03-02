@@ -299,7 +299,7 @@ namespace PERSONELTAKIPUYGULAMASI
                     ID = secilenID
                 };
                 bool result = calisanDAL.Update(calisan,orjinalPersonelNo);
-                if (result)
+                if (result) //RESULT=true
                 {
                     Refresh();
                     MessageBox.Show("Güncellendiii");
