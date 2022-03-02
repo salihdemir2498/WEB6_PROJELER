@@ -8,8 +8,9 @@ namespace KutuphaneProjesi
 {
     class Kutuphane
     {
+
     }
-    public class Turler //tblTurler tablosu için
+    public class Tur
     {
         private int id;
 
@@ -27,7 +28,7 @@ namespace KutuphaneProjesi
 
     }
 
-    public class YayinEvleri //tblYayinevleri tablosu için
+    public class YayinEvi
     {
         private int id;
 
@@ -41,7 +42,7 @@ namespace KutuphaneProjesi
 
     }
 
-    public class Kisiler
+    public class Kisi
     {
         private int id;
 
@@ -56,9 +57,9 @@ namespace KutuphaneProjesi
         public string Mail { get; set; }
 
     }
-    public class Uyeler : Kisiler
+    public class Uye : Kisi
     {
-        public Uyeler()
+        public Uye()
         {
             CezaDurumu = false;
         }
@@ -84,11 +85,11 @@ namespace KutuphaneProjesi
         public bool CezaDurumu { get; set; }
     }
 
-    public class Yazarlar : Kisiler
+    public class Yazar : Kisi
     {
         public int TurID { get; set; } //YAZARIN ön plana çıktığı tür bilgisi
     }
-    public class Kitaplar
+    public class Kitap
     {
 
         public string ISBN { get; set; }
@@ -111,7 +112,7 @@ namespace KutuphaneProjesi
         public string KitapISBN { get; set; }
         public DateTime VerilisTarihi { get; set; }
         public DateTime TeslimTarihi { get; set; }
-        public bool Iptal { get; set; }
+        public bool Iptal { get; set; } //silinenlere true yazacağız
     }
 
 }

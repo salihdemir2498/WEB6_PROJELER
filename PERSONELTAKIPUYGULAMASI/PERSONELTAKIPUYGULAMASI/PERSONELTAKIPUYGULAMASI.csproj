@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{53B3B020-B0F7-4A3D-9F75-36BE4991BA65}</ProjectGuid>
+    <ProjectGuid>{FB38125C-EBF0-48E2-894C-90745515C959}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>KutuphaneProjesi</RootNamespace>
-    <AssemblyName>KutuphaneProjesi</AssemblyName>
+    <RootNamespace>PERSONELTAKIPUYGULAMASI</RootNamespace>
+    <AssemblyName>PERSONELTAKIPUYGULAMASI</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,6 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,18 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormKutuphane.cs">
+    <Compile Include="DataAccess\CalisanDAL.cs" />
+    <Compile Include="Entities\Calisan.cs" />
+    <Compile Include="Forms\FormAna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormKutuphane.Designer.cs">
-      <DependentUpon>FormKutuphane.cs</DependentUpon>
+    <Compile Include="Forms\FormAna.Designer.cs">
+      <DependentUpon>FormAna.cs</DependentUpon>
     </Compile>
-    <Compile Include="Kutuphane.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="VeriTabani.cs" />
-    <EmbeddedResource Include="FormKutuphane.resx">
-      <DependentUpon>FormKutuphane.cs</DependentUpon>
+    <Compile Include="Tools\SQLBaglanti.cs" />
+    <EmbeddedResource Include="Forms\FormAna.resx">
+      <DependentUpon>FormAna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,5 +83,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
