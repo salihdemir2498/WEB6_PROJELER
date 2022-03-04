@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{FB38125C-EBF0-48E2-894C-90745515C959}</ProjectGuid>
+    <ProjectGuid>{6351F5C7-0472-452F-9A1C-FDE43CD9316F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PERSONELTAKIPUYGULAMASI</RootNamespace>
-    <AssemblyName>PERSONELTAKIPUYGULAMASI</AssemblyName>
+    <RootNamespace>Urun_Satıs</RootNamespace>
+    <AssemblyName>Urun_Satıs</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,21 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataAccess\CalisanDAL.cs" />
-    <Compile Include="Entities\Calisan.cs" />
-    <Compile Include="Entities\Departman.cs" />
-    <Compile Include="Entities\IBaseEntity.cs" />
-    <Compile Include="Entities\Unvan.cs" />
-    <Compile Include="Forms\FormAna.cs">
+    <Compile Include="DataAccess\BaglantiDAL\Baglanti.cs" />
+    <Compile Include="DataAccess\DAL\SatisDAL.cs" />
+    <Compile Include="Entity\Satis.cs" />
+    <Compile Include="Entity\Urun.cs" />
+    <Compile Include="Presentation\FormAna.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormAna.Designer.cs">
+    <Compile Include="Presentation\FormAna.Designer.cs">
       <DependentUpon>FormAna.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tools\SQLBaglanti.cs" />
-    <EmbeddedResource Include="Forms\FormAna.resx">
+    <EmbeddedResource Include="Presentation\FormAna.resx">
       <DependentUpon>FormAna.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

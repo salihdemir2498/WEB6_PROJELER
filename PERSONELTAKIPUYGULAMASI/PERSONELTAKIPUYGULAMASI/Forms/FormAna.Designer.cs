@@ -31,8 +31,8 @@ namespace PERSONELTAKIPUYGULAMASI
         {
             this.pnlAraclar = new System.Windows.Forms.Panel();
             this.cmbDurumu = new System.Windows.Forms.ComboBox();
-            this.cmbUnvan = new System.Windows.Forms.ComboBox();
-            this.cmbDepartman = new System.Windows.Forms.ComboBox();
+            this.cmbUnvanID = new System.Windows.Forms.ComboBox();
+            this.cmbDepartmanID = new System.Windows.Forms.ComboBox();
             this.dtpIseBaslamaTarihi = new System.Windows.Forms.DateTimePicker();
             this.dtpDogumTarihi = new System.Windows.Forms.DateTimePicker();
             this.txtPersonelNo = new System.Windows.Forms.TextBox();
@@ -69,8 +69,8 @@ namespace PERSONELTAKIPUYGULAMASI
             // 
             this.pnlAraclar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAraclar.Controls.Add(this.cmbDurumu);
-            this.pnlAraclar.Controls.Add(this.cmbUnvan);
-            this.pnlAraclar.Controls.Add(this.cmbDepartman);
+            this.pnlAraclar.Controls.Add(this.cmbUnvanID);
+            this.pnlAraclar.Controls.Add(this.cmbDepartmanID);
             this.pnlAraclar.Controls.Add(this.dtpIseBaslamaTarihi);
             this.pnlAraclar.Controls.Add(this.dtpDogumTarihi);
             this.pnlAraclar.Controls.Add(this.txtPersonelNo);
@@ -103,34 +103,34 @@ namespace PERSONELTAKIPUYGULAMASI
             this.cmbDurumu.TabIndex = 16;
             this.cmbDurumu.Tag = "Durumu";
             // 
-            // cmbUnvan
+            // cmbUnvanID
             // 
-            this.cmbUnvan.FormattingEnabled = true;
-            this.cmbUnvan.Items.AddRange(new object[] {
+            this.cmbUnvanID.FormattingEnabled = true;
+            this.cmbUnvanID.Items.AddRange(new object[] {
             "İşçi",
             "Ekip Lideri",
             "Yönetici Yardımcısı",
             "Yönetici"});
-            this.cmbUnvan.Location = new System.Drawing.Point(211, 241);
-            this.cmbUnvan.Name = "cmbUnvan";
-            this.cmbUnvan.Size = new System.Drawing.Size(243, 24);
-            this.cmbUnvan.TabIndex = 15;
-            this.cmbUnvan.Tag = "Unvan";
+            this.cmbUnvanID.Location = new System.Drawing.Point(211, 241);
+            this.cmbUnvanID.Name = "cmbUnvanID";
+            this.cmbUnvanID.Size = new System.Drawing.Size(243, 24);
+            this.cmbUnvanID.TabIndex = 15;
+            this.cmbUnvanID.Tag = "UnvanID";
             // 
-            // cmbDepartman
+            // cmbDepartmanID
             // 
-            this.cmbDepartman.FormattingEnabled = true;
-            this.cmbDepartman.Items.AddRange(new object[] {
+            this.cmbDepartmanID.FormattingEnabled = true;
+            this.cmbDepartmanID.Items.AddRange(new object[] {
             "İnsan Kaynakları",
             "Muhasebe",
             "Satış",
             "Üretim",
             "Teknik"});
-            this.cmbDepartman.Location = new System.Drawing.Point(211, 204);
-            this.cmbDepartman.Name = "cmbDepartman";
-            this.cmbDepartman.Size = new System.Drawing.Size(243, 24);
-            this.cmbDepartman.TabIndex = 14;
-            this.cmbDepartman.Tag = "Departman";
+            this.cmbDepartmanID.Location = new System.Drawing.Point(211, 204);
+            this.cmbDepartmanID.Name = "cmbDepartmanID";
+            this.cmbDepartmanID.Size = new System.Drawing.Size(243, 24);
+            this.cmbDepartmanID.TabIndex = 14;
+            this.cmbDepartmanID.Tag = "DepartmanID";
             // 
             // dtpIseBaslamaTarihi
             // 
@@ -215,7 +215,7 @@ namespace PERSONELTAKIPUYGULAMASI
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(187, 20);
             this.label7.TabIndex = 5;
-            this.label7.Text = "DEPARTMAN";
+            this.label7.Text = "DepartmanID";
             // 
             // label6
             // 
@@ -419,7 +419,10 @@ namespace PERSONELTAKIPUYGULAMASI
             // 
             // dgvCalisanlar
             // 
+            this.dgvCalisanlar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCalisanlar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCalisanlar.GridColor = System.Drawing.Color.Coral;
             this.dgvCalisanlar.Location = new System.Drawing.Point(503, 13);
             this.dgvCalisanlar.Name = "dgvCalisanlar";
             this.dgvCalisanlar.RowHeadersWidth = 51;
@@ -455,8 +458,8 @@ namespace PERSONELTAKIPUYGULAMASI
 
         private System.Windows.Forms.Panel pnlAraclar;
         private System.Windows.Forms.ComboBox cmbDurumu;
-        private System.Windows.Forms.ComboBox cmbUnvan;
-        private System.Windows.Forms.ComboBox cmbDepartman;
+        private System.Windows.Forms.ComboBox cmbUnvanID;
+        private System.Windows.Forms.ComboBox cmbDepartmanID;
         private System.Windows.Forms.DateTimePicker dtpIseBaslamaTarihi;
         private System.Windows.Forms.DateTimePicker dtpDogumTarihi;
         private System.Windows.Forms.TextBox txtPersonelNo;

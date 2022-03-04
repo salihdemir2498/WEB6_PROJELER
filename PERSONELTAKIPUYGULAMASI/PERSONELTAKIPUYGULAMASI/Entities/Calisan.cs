@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PERSONELTAKIPUYGULAMASI.Entities
 {
-    class Calisan
+    class Calisan : IBaseEntity
     {
         //Bu class bizim entities katmanımızdadır.
         //Tablolarımızdan tblCalisanlar ' a ait bir entitie için hazırlandı.
@@ -20,6 +20,5 @@ namespace PERSONELTAKIPUYGULAMASI.Entities
         public string Departman { get; set; }
         public string Unvan { get; set; }
         public string Durumu { get; set; }
-
     }
 }

@@ -31,7 +31,7 @@ namespace PERSONELTAKIPUYGULAMASI.DataAccess
             try
             {
                 //Buraya yazacağımız işlemleri dene, sorun yoksa çalıştır.
-                using (SqlCommand command = new SqlCommand($"SELECT * FROM tblCalisanlar {kosulCumlesi}", SQLBaglanti.Baglanti))
+                using (SqlCommand command = new SqlCommand($"SELECT * FROM vCalisanlar {kosulCumlesi}", SQLBaglanti.Baglanti))
                 {
                     //Using satırında yaratılan command adlı nesne, sadece bu scope ta yaşayacak.Bu 
                     //scope dışında yok olmuş olacak.
@@ -80,8 +80,8 @@ namespace PERSONELTAKIPUYGULAMASI.DataAccess
             }
             else
             {
-                string sorguCumlesi = $"INSERT INTO tblCalisanlar (Ad,Soyad,TcNo,PersonelNo,DogumTarihi,IseBaslamaTarihi,Departman," +
-               $"Unvan,Durumu) VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)";
+                string sorguCumlesi = $"INSERT INTO tblCalisanlar (Ad,Soyad,TcNo,PersonelNo,DogumTarihi,IseBaslamaTarihi,DepartmanID," +
+               $"UnvanID,Durumu) VALUES (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8,@p9)";
                 try
                 {
                     using (SqlCommand command = new SqlCommand(sorguCumlesi, SQLBaglanti.Baglanti))
@@ -128,7 +128,7 @@ namespace PERSONELTAKIPUYGULAMASI.DataAccess
             else
             {
                 string sorguCumlesi = $"UPDATE tblCalisanlar SET Ad=@p1, Soyad=@p2, TcNo=@p3, PersonelNo=@p4," +
-                $"DogumTarihi=@p5, IseBaslamaTarihi=@p6, Departman=@p7, Unvan=@p8, Durumu=@p9 WHERE ID=@p10";
+                $"DogumTarihi=@p5, IseBaslamaTarihi=@p6, DepartmanID=@p7, UnvanID=@p8, Durumu=@p9 WHERE ID=@p10";
                 try
                 {
                     using (SqlCommand command = new SqlCommand(sorguCumlesi, SQLBaglanti.Baglanti))
